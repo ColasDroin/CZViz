@@ -1,0 +1,208 @@
+#app-container {
+    width: 100%;
+    max-width: none;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 18px;
+    margin: 0px;
+}
+
+hr {
+    margin: 0.3rem 0rem;
+}
+
+H5 {
+    color: #2c8cff;
+    font-weight: 300;
+}
+
+H5, H3 {
+    font-family: Acumin, "Helvetica Neue", sans-serif;
+}
+
+#left-column, #left-column2, #left-column3 {
+    background-color: #f9f9f9;
+    padding: 0rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(140vh - 5.5rem);
+}
+
+#middle-column, #middle-column2, #middle-column3 {
+    background-color: #ffffff;
+    padding: 2rem 2rem 2rem 2rem;
+    min-height: calc(100vh - 5.5rem);
+}
+
+#right-column, #right-column2, #right-column3 {
+    background-color: #ffffff;
+    padding: 2rem 2rem 2rem 2rem;
+    min-height: calc(100vh - 5.5rem);
+}
+
+
+
+.table-row {
+    height: 63px;
+    vertical-align: middle;
+    font-size: 13px;
+}
+
+
+#intro, #intro2, #intro3 {
+    margin: 20px 0px;
+    font-family: "Helvetica Neue", sans-serif;
+    text-align: justify;
+}
+
+#control-card2, #control-card3 {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+#control-card, #control-card2, #control-card3 > p {
+    font-weight: bold;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+#graph_tab_1_card, #graph_tab_2_card, #graph_tab_3_card, #data_card {
+    background-color: #FFFFFF;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#graph_comparison_1_card, #graph_comparison_2_card {
+    background-color: #FFFFFF;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#data_card > b {
+    line-height: 2.5;
+}
+
+#data_card {
+    margin: 20px 0px;
+}
+
+#patient_volume_hm {
+    height: 400px;
+}
+
+.table-row:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.row-department > b {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#header_wait_time_min, #header_care_score {
+    display: table;
+}
+
+#header_wait_time_min > b, #header_care_score > b {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/*
+  ##Device = Most of the Smartphones Mobiles / ipad (Portrait)
+  */
+
+@media only screen and (max-width: 750px), screen and (min-width: 768px) and (max-width: 1024px) {
+
+    body {
+        font-size: 13px;
+        margin: 0px;
+    }
+
+
+    h5 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    #intro, #intro2, #intro3 {
+        margin: 10px 0px;
+    }
+
+    #left-column, #left-column2, #left-column3 {
+        min-height: calc(40vh - 5.5rem);
+    }
+
+    #left-column, #middle-column, #right-column, #left-column2, #middle-column2, #right-column2 , #left-column3, #middle-column3, #right-column3 {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    #right-column, #right-column2, #right-column3 {
+        padding: 0rem 0.5rem;
+    }
+
+    #middle-column, #middle-column2, #middle-column3 {
+        padding: 0.5rem 0.5rem;
+    }
+
+
+    #reset-btn-outer {
+        text-align: center;
+    }
+
+    .table-row > div {
+        width: 100% !important;
+        text-align: center;
+        margin: auto;
+    }
+
+    .table-row:nth-child(even), .table-row:nth-child(odd) {
+        background-color: #FFFFFF;
+    }
+
+    #header {
+        display: none;
+    }
+
+    #wait_time_table:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    #graph_tab_1_card > b, #graph_tab_2_card > b,#graph_tab_3_card > b,#data_card > b {
+        line-height: 2.5;
+        font-size: 13px;
+        display: block;
+        text-align: center;
+    }
+
+    #graph_comparison_1_card > b, #graph_comparison_2_card  > b {
+        line-height: 2.5;
+        font-size: 13px;
+        display: block;
+        text-align: center;
+    }
+
+    .annotation-text {
+        font-size: 0.8rem !important;
+    }
+
+}
