@@ -23,7 +23,7 @@ import LinearRegression
 np.seterr(all='ignore')
 
 """ TEMPORARY PASSWORD """
-VALID_USERNAME_PASSWORD_PAIRS = [ ['itz', 'itz'] ]
+#VALID_USERNAME_PASSWORD_PAIRS = [ ['itz', 'itz'] ]
 server = flask.Flask(__name__)
 server.secret_key = os.environ.get('secret_key', 'secret')
 
@@ -32,11 +32,11 @@ app = dash.Dash(
     __name__,
     server = server,
     meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}],
-    #url_base_pathname='/gunicorn/',
+    url_base_pathname='/gunicorn/',
 )
 
 app.config.suppress_callback_exceptions = True
-auth = dash_auth.BasicAuth(app, VALID_USERNAME_PASSWORD_PAIRS)
+#auth = dash_auth.BasicAuth(app, VALID_USERNAME_PASSWORD_PAIRS)
 
 """ LOAD DATA """
 # Path
@@ -99,7 +99,8 @@ def description_card():
         children = [
             html.H3("Welcome to CZviz"),
             dcc.Markdown('''This app allows you to explore the full dataset and \
-                          analysis coming from the study by _... & al_.'''),
+                          analysis from the study by _Droin & al_ published in \
+                          _Nature Metabolism_.'''),
         ],
     )
 
@@ -515,7 +516,7 @@ app.layout = html.Div(
                 ),
             ],
         ),
-    html.Div(children = "©2019 Naef lab",
+    html.Div(children = "©2020 Naef lab",
             style = {'position':'fixed',
                      'bottom':'0',
                      'right':'0',
