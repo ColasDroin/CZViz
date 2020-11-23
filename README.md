@@ -12,12 +12,12 @@ The Python modules needed to run the app are listed in requirements.txt
 ## Usage
 
 Run the app by typing 
-'''bash
+```bash
 python app.py
-'''
+```
 
 NB: to run the app localy (note a unix server), please comment out line 35: 
-'''url_base_pathname='/gunicorn/','''
+```url_base_pathname='/gunicorn/',```
 
 ## URL
 
