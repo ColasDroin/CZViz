@@ -16,7 +16,7 @@ Run the app by typing
 python app.py
 ```
 
-NB: to run the app localy (note a unix server), please comment out line 35: 
+NB: to run the app localy (not a unix server), please comment out line 35: 
 ```url_base_pathname='/gunicorn/',```
 
 ## URL
